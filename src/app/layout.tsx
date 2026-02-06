@@ -24,8 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+      </style>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-400`}
       >
         {children}
       </body>
