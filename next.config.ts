@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/projects/n-queens',
+        destination: 'https://n-queens-iota.vercel.app'
+      },
+      {
+        source: '/projects/n-queens/:path*',
+        destination: 'https://n-queens-iota.vercel.app/:path*'
+      }
+    ]
+  }
+}
